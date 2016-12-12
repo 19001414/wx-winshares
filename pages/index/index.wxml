@@ -1,0 +1,59 @@
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" 
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="category">
+  <view class="category_item" wx:for="{{iconArray}}">
+    <view class="category_item_wrap">
+      <view class="icon_wrap">
+        <image src="{{item.iconUrl}}" class="index_icon"></image>
+      </view>
+      <view class="category_item_text">
+        <text>{{item.iconText}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='goodsList'>
+  <view class='good_item'>
+    <text>年菜专区</text>
+  </view>
+  <view class='aui-row'>
+    <view class='aui-col-xs-6'>
+      <view class='aui-content' data-good="{{}}" bindtap="onDetailTap">
+          <image src="../../image/59dfc6ee4cf650a9feff7f88c7deeb6e.jpg" class='index_goods' mode="aspectFit"></image>
+          <view>
+            <text>盆菜定金</text>
+          </view>
+          <view>
+            <text>购买998元盆菜，可抵400元使用</text>
+          </view>
+          <view>
+            <text>￥价格</text>
+          </view>
+      </view>
+    </view>
+    <view class='aui-col-xs-6'>
+      <view class='aui-content'>
+        <navigator>
+          <image src="../../image/59dfc6ee4cf650a9feff7f88c7deeb6e.jpg" class='index_goods' mode="aspectFit"></image>
+          <view>
+            <text>盆菜定金</text>
+          </view>
+          <view>
+            <text>购买998元盆菜，可抵400元使用</text>
+          </view>
+          <view>
+            <text>￥价格</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

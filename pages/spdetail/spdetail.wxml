@@ -1,0 +1,51 @@
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" 
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="goods_infor_top">
+  <view class="goods_title">
+    <text>盆菜订金</text>
+    <view class="goods_collect_btn" bindtap="collect">
+      <view wx:if="{{iscollect}}">
+        <image src="../../image/icon-aixin.png" class="goods_collect_img"></image>
+      </view>
+      <view wx:else>
+        <image src="../../image/icon-aixin1.png" class="goods_collect_img"></image>
+      </view> 
+      <text wx:if="{{iscollect}}">已收藏</text>
+      <text wx:else>收藏</text>
+    </view>
+    <view>
+      <text>购买998元盆菜时可抵400元使用</text>
+    </view>
+    <view class="goods_price">
+      销售价：<text>¥169</text>
+      <text class="goods_old_price">¥269</text>
+    </view>
+  </view>
+</view>
+<view class="goods_detail">
+  <!--<view class="goods_detail_title">商品详情</view>-->
+  <view>
+    <image bindload="cusImageLoad" src="../../image/IMG_0466.jpg" style="width:{{imageWidth}};height:{{imageHeight}}"></image>
+  </view>
+</view>
+<view class="goods_bottom"></view>
+<view class="goods_bottom_btn">
+  <view>
+    <view class="goods_one">
+      <view class="goods_car_num">
+        <span>0</span>
+      </view>
+    </view>
+    <view class="goods_half_half red">前往商城</view>
+    <view class="goods_half_half blue">加入购物车</view>
+    <view class="goods_half_half green">前往付款</view>
+  </view>
+</view>
